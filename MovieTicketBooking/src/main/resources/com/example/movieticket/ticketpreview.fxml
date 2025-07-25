@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.movieapp.controllers.TicketPreviewController"
+            prefWidth="600" prefHeight="400"
+            style="-fx-background-color: skyblue;">
+    <children>
+        <Label text="Ticket Preview" layoutX="200" layoutY="20"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <Label text="Name:" layoutX="30" layoutY="80" />
+        <Label fx:id="nameLabel" layoutX="150" layoutY="80" />
+
+        <Label text="Movie:" layoutX="30" layoutY="110" />
+        <Label fx:id="movieLabel" layoutX="150" layoutY="110" />
+
+        <Label text="Seat:" layoutX="30" layoutY="140" />
+        <Label fx:id="seatLabel" layoutX="150" layoutY="140" />
+
+        <Label text="Section:" layoutX="30" layoutY="170" />
+        <Label fx:id="sectionLabel" layoutX="150" layoutY="170" />
+
+        <Label text="Date:" layoutX="30" layoutY="200" />
+        <Label fx:id="dateLabel" layoutX="150" layoutY="200" />
+
+        <Label text="Time:" layoutX="30" layoutY="230" />
+        <Label fx:id="timeLabel" layoutX="150" layoutY="230" />
+
+        <Label text="Snacks:" layoutX="30" layoutY="260" />
+        <Label fx:id="snacksLabel" layoutX="150" layoutY="260" />
+
+        <Label text="Total Amount:" layoutX="30" layoutY="290" />
+        <Label fx:id="totalLabel" layoutX="150" layoutY="290" />
+    </children>
+</AnchorPane>

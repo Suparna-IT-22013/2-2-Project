@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.movieapp.controllers.SeatSelectionController">
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 20;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" text="Select Your Seat" />
+            <HBox alignment="CENTER" spacing="30">
+                <Label fx:id="movieLabel" style="-fx-text-fill: #ecf0f1; -fx-font-size: 14px;" text="Movie: " />
+                <Label fx:id="dateLabel" style="-fx-text-fill: #ecf0f1; -fx-font-size: 14px;" text="Date: " />
+                <Label fx:id="timeLabel" style="-fx-text-fill: #ecf0f1; -fx-font-size: 14px;" text="Time: " />
+                <Label fx:id="sectionLabel" style="-fx-text-fill: #ecf0f1; -fx-font-size: 14px;" text="Section: " />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: #ecf0f1;">
+            <VBox alignment="CENTER" spacing="20" style="-fx-background-color: #ecf0f1;">
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+
+                <Label fx:id="selectedSeatLabel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="No seat selected" />
+
+                <GridPane fx:id="seatGrid" alignment="CENTER" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                </GridPane>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" style="-fx-background-color: #34495e; -fx-padding: 20;">
+            <Button fx:id="backButton" onAction="#handleBack" prefHeight="40" prefWidth="120" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;" text="Back" />
+            <Button fx:id="confirmButton" onAction="#handleConfirmBooking" prefHeight="40" prefWidth="120" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;" text="Confirm Booking" />
+        </HBox>
+    </bottom>
+</BorderPane>

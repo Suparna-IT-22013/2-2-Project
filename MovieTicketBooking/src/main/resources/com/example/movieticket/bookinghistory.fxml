@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.movieapp.controllers.BookingHistoryController"
+            prefWidth="1400.0" prefHeight="700.0"
+            style="-fx-background-color: white;">
+    <children>
+        <VBox AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+              AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" spacing="10">
+
+            <Label text="Booking History"
+                   style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+            <HBox spacing="10.0">
+                <Button fx:id="deleteSelectedBtn" text="Delete Selected" onAction="#deleteSelectedBooking"
+                        style="-fx-background-color: #ff6666; -fx-text-fill: white;" />
+                <Button fx:id="deleteAllBtn" text="Delete All History" onAction="#deleteAllBookings"
+                        style="-fx-background-color: #cc0000; -fx-text-fill: white;" />
+            </HBox>
+
+            <TableView fx:id="historyTable" VBox.vgrow="ALWAYS" prefWidth="1360.0">
+                <columns>
+                    <TableColumn fx:id="nameCol" text="Name" prefWidth="200" minWidth="150"/>
+                    <TableColumn fx:id="movieCol" text="Movie" prefWidth="180" minWidth="120"/>
+                    <TableColumn fx:id="seatCol" text="Seat" prefWidth="80" minWidth="60"/>
+                    <TableColumn fx:id="sectionCol" text="Section" prefWidth="100" minWidth="80"/>
+                    <TableColumn fx:id="dateCol" text="Date" prefWidth="120" minWidth="100"/>
+                    <TableColumn fx:id="timeCol" text="Time" prefWidth="100" minWidth="80"/>
+                    <TableColumn fx:id="snacksCol" text="Snacks" prefWidth="300" minWidth="200"/>
+                    <TableColumn fx:id="totalCol" text="Total" prefWidth="100" minWidth="80"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>

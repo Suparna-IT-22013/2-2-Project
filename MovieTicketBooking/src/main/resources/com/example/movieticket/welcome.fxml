@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.movieapp.controllers.WelcomeController"
+            prefWidth="1200" prefHeight="800">
+    <children>
+        <ImageView fx:id="logoImage" fitWidth="1600" fitHeight="700" preserveRatio="false" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" />
+        <Button fx:id="loginButton"
+                text="LogIn"
+                layoutX="800" layoutY="400"
+                style="-fx-background-color: #e53935; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" />
+    </children>
+</AnchorPane>

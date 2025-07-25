@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="mainPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.movieapp.controllers.MainController">
+    <top>
+        <Label text="🎬 Blockbuster Zone"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-padding: 10; -fx-text-fill: red;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+    <center>
+        <AnchorPane fx:id="contentArea" />
+    </center>
+</BorderPane>

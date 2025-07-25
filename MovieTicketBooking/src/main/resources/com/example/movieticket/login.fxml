@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.movieapp.controllers.LoginController"
+            prefWidth="1600" prefHeight="800"
+            style="-fx-background-color: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);">
+    <children>
+        <VBox alignment="CENTER" spacing="17" layoutX="600" layoutY="90" prefWidth="360">
+            <Label text="BLOCKBUSTER ZONE LOGIN" textFill="white"
+                   style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <Label text="Admin Login:" textFill="white" style="-fx-font-size: 14px;" />
+            <TextField fx:id="usernameField" promptText="Enter your username"
+                       style="-fx-background-radius: 300; -fx-padding: 10;" />
+
+            <Label text="Password:" textFill="white" style="-fx-font-size: 14px;" />
+            <PasswordField fx:id="passwordField" promptText="Enter your password"
+                           style="-fx-background-radius: 300; -fx-padding: 10;" />
+
+            <Button text="Login" onAction="#handleLogin"
+                    style="-fx-background-color: #ef5350; -fx-text-fill: white; -fx-font-size: 20px; -fx-background-radius: 20;" />
+        </VBox>
+    </children>
+</AnchorPane>

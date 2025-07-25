@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.movieapp.controllers.BookingController" prefWidth="1600.0"   prefHeight="800.0">
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 20;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" text="Book Your Movie Ticket" />
+            <Label style="-fx-text-fill: #ecf0f1; -fx-font-size: 14px;" text="Fill in the details and select your preferred seat" />
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: #ecf0f1;">
+            <VBox alignment="CENTER" spacing="20" style="-fx-background-color: #ecf0f1;">
+                <padding>
+                    <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                </padding>
+
+                <!-- Customer Information -->
+                <VBox alignment="CENTER" spacing="15" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                    <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Customer Information" />
+
+                    <VBox spacing="8">
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #34495e;" text="Full Name:" />
+                        <TextField fx:id="nameField" promptText="Enter your full name" style="-fx-pref-height: 35px; -fx-font-size: 14px;" />
+                    </VBox>
+                </VBox>
+
+                <!-- Movie Details -->
+                <VBox alignment="CENTER" spacing="15" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                    <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Movie Details" />
+
+                    <HBox spacing="20">
+                        <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <Label style="-fx-font-weight: bold; -fx-text-fill: #34495e;" text="Movie Name:" />
+                            <ComboBox fx:id="movieNameBox" prefWidth="200" promptText="Select Movie" style="-fx-pref-height: 35px;" />
+                        </VBox>
+
+                        <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <Label style="-fx-font-weight: bold; -fx-text-fill: #34495e;" text="Date:" />
+                            <DatePicker fx:id="datePicker" prefWidth="200" promptText="Select Date" style="-fx-pref-height: 35px;" />
+                        </VBox>
+
+                        <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <Label style="-fx-font-weight: bold; -fx-text-fill: #34495e;" text="Show Time:" />
+                            <ComboBox fx:id="timeBox" prefWidth="200" promptText="Select Time" style="-fx-pref-height: 35px;" />
+                        </VBox>
+                    </HBox>
+
+                    <VBox spacing="8" HBox.hgrow="ALWAYS">
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: #34495e;" text="Seat Section:" />
+                        <ComboBox fx:id="seatSectionBox" prefWidth="200" promptText="Select Section" style="-fx-pref-height: 35px;" />
+                    </VBox>
+                </VBox>
+
+                <!-- Snacks Selection -->
+                <VBox alignment="CENTER" spacing="15" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                    <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Snacks &amp; Beverages (Optional)" />
+
+                    <HBox alignment="CENTER" spacing="30">
+                        <VBox alignment="CENTER" spacing="5">
+                            <CheckBox fx:id="popcornCheck" style="-fx-font-size: 14px;" text="Popcorn" />
+                            <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text="৳120" />
+                        </VBox>
+
+                        <VBox alignment="CENTER" spacing="5">
+                            <CheckBox fx:id="chickenCheck" style="-fx-font-size: 14px;" text="Chicken Fry" />
+                            <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text="৳300" />
+                        </VBox>
+
+                        <VBox alignment="CENTER" spacing="5">
+                            <CheckBox fx:id="spriteCheck" style="-fx-font-size: 14px;" text="Sprite" />
+                            <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text="৳40" />
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Action Buttons -->
+                <HBox alignment="CENTER" spacing="20">
+                    <Button fx:id="selectSeatsBtn" onAction="#handleSelectSeats" prefHeight="45" prefWidth="180"
+                            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 5;"
+                            text="Select Seats" />
+                </HBox>
+
+                <!-- Admin Actions -->
+                <VBox alignment="CENTER" spacing="15" style="-fx-background-color: #e8f4f8; -fx-padding: 20; -fx-background-radius: 10; -fx-border-color: #3498db; -fx-border-width: 1; -fx-border-radius: 10;">
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Admin Functions" />
+
+                    <HBox alignment="CENTER" spacing="15">
+                        <Button fx:id="deleteTimeBtn" onAction="#deleteBookingTime" prefHeight="35" prefWidth="150"
+                                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;"
+                                text="Delete Time Slot" />
+
+                        <Button onAction="#handleHistory" prefHeight="35" prefWidth="150"
+                                style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;"
+                                text="View History" />
+                    </HBox>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
